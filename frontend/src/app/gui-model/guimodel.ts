@@ -107,6 +107,15 @@ export class GuiModel {
                             "width": 2,
                             "newRow": true,
                         },
+                        {
+                            "type": "button",
+                            "name": { default: "New ToDo" },
+                            "icon": "fa-plus",
+                            "color": "orange",
+                            "page": "newToDoPage",
+                            "width": 2,
+                            "newRow": true,
+                        },
                     ]
                 },
                 {
@@ -114,16 +123,6 @@ export class GuiModel {
                     "elementList": [
                         {
                             "type": "backbutton",
-                        },
-                        {
-                            "type": "newButton",
-                            "name": { default: "Neues ToDo"},
-                            "icon": "fa-user",
-                            "color": "green",
-                            "width": 2,
-                            "form" : {
-                                "form" : "ToDoForm"
-                            }
                         },
                         {
                             "type": "list",
@@ -136,6 +135,24 @@ export class GuiModel {
                                 "form": "ToDoForm"
                             }
                         }
+                    ]
+                },
+                {
+                    "id": "newToDoPage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "Neues ToDo"},
+                            "icon": "fa-user",
+                            "color": "lime",
+                            "width": 2,
+                            "form" : {
+                                "form" : "ToDoForm"
+                            }
+                        },
                     ]
                 },
             ]

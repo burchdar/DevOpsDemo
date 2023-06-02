@@ -25,11 +25,11 @@ public class ToDoController {
 
     @EventListener(ApplicationReadyEvent.class)
     public void init() {
-        this.todos.put(1,new ToDo(1, "Neuer Job", "5 DevOps Engineers einstellen"));
-        this.todos.put(2,new ToDo(2, "Geschäftsleitung", "Mit Präsentation von DevOps überzeugen"));
-        this.todos.put(3,new ToDo(3, "Unit Tests", "Neues Projekt mit Unit Tests starten"));
-        this.todos.put(4,new ToDo(4, "Deployment", "Jede Woche!"));
-        this.todos.put(5,new ToDo(5, "Organigramm", "Löschen"));
+        this.todos.put(1, new ToDo(1, "Neuer Job", "5 DevOps Engineers einstellen"));
+        this.todos.put(2, new ToDo(2, "Geschäftsleitung", "Mit Präsentation von DevOps überzeugen"));
+        this.todos.put(3, new ToDo(3, "Unit Tests", "Neues Projekt mit Unit Tests starten"));
+        this.todos.put(4, new ToDo(4, "Deployment", "Jede Woche!"));
+        this.todos.put(5, new ToDo(5, "Organigramm", "Löschen"));
         System.out.println("Init Data");
     }
 
@@ -41,7 +41,8 @@ public class ToDoController {
     @GetMapping("/services/ping")
     public String ping() {
         String languageCode = "de";
-        return "{ \"status\": \"ok\", \"userId\": \"admin"+ "\", \"languageCode\": \"" + languageCode + "\",\"version\": \"0.0.1" + "\"}";
+        return "{ \"status\": \"ok\", \"userId\": \"admin" + "\", \"languageCode\": \"" + languageCode
+                + "\",\"version\": \"0.0.1" + "\"}";
     }
 
     @GetMapping("/count")
@@ -86,5 +87,23 @@ public class ToDoController {
         return this.todos.remove(id);
     }
 
+    @GetMapping("/services/tododesc/{id}")
+    public String getTododesc(@PathVariable Integer id) {
+        return this.todos.get(id).getDescription();
+    }
+
+    @PutMapping("/services/tododesc/{id}")
+    public void createTododesc(@PathVariable Integer id, @RequestBody ToDo todo) {
+        // todo.getId(id);
+        String title = this.todos.get(id).getTitle();
+        this.todos.get(id);
+        this.todos.put(id, todo);
+        this.todos.get(id).setTitle(title);
+    }
+
+    @DeleteMapping("/services/todoall")
+    public void deleteTodoall() {
+        this.todos.clear();
+    }
 
 }
