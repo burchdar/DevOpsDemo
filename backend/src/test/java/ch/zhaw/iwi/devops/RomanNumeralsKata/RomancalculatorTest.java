@@ -12,5 +12,11 @@ public class RomancalculatorTest {
         Romancalculator number = new Romancalculator();
         assertThat("X").isEqualTo(number.convert(10));         
     }
-    
+
+    @Test
+    public void test2() {
+        Romancalculator number = new Romancalculator();
+        assertThat("IV").isEqualTo(number.convert(4));         
+    }
+
 }
