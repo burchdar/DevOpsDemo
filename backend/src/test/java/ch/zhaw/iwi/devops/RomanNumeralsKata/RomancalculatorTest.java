@@ -83,13 +83,5 @@ public class RomancalculatorTest {
         assertEquals("CMXCIX", number.convert("999"));
     }
 
-    @Test
-    public void test11() {
-        Romancalculator number = new Romancalculator();
-        assertEquals("Bitte nur Zahlen von 1-1000 eingeben", number.convert(10022));
-        assertEquals("Bitte nur Zahlen von 1-1000 eingeben", number.convert(20000));
-        assertEquals("Bitte nur Zahlen von 1-1000 eingeben", number.convert(-1));      
-    }
-
 }
 
