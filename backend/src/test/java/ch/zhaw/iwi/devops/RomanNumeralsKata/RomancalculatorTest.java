@@ -76,5 +76,12 @@ public class RomancalculatorTest {
         assertEquals("CDXLIX", number.convert("449"));
     }
 
+    @Test
+    public void test10() {
+        Romancalculator number = new Romancalculator();
+        assertEquals("D", number.convert("500"));
+        assertEquals("CMXCIX", number.convert("999"));
+    }
+
 }
 
