@@ -13,7 +13,7 @@ public class Romancalculator {
         else if (i == 3) return "III";
         else if (i == 2) return "II";
         else if (i == 1) return "I";
-        else return "";
+        else return "Bitte nur Zahlen von 1-10 eingeben";
     }
     
 }
