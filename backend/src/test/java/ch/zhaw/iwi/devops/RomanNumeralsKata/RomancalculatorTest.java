@@ -33,7 +33,6 @@ public class RomancalculatorTest {
         assertEquals("IX", number.convert(9));
         assertEquals("X", number.convert(10));       
     }
-
     @Test
     public void test4() {
         Romancalculator number = new Romancalculator();
@@ -48,6 +47,12 @@ public class RomancalculatorTest {
         assertEquals("Bitte nur Zahlen eingeben", number.convert("a"));
         assertEquals("Bitte nur Zahlen eingeben", number.convert("Fünf"));    
     }
+    @Test
+    public void test6() {
+        Romancalculator number = new Romancalculator();
+        assertEquals("XV", number.convert("15"));
+        assertEquals("XIV", number.convert("19")); 
+}
 
 }
 
