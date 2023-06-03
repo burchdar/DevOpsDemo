@@ -42,5 +42,12 @@ public class RomancalculatorTest {
         assertEquals("Bitte nur Zahlen von 1-10 eingeben", number.convert(-1));      
     }
 
+    @Test
+    public void test5() {
+        Romancalculator number = new Romancalculator();
+        assertEquals("Bitte nur Zahlen eingeben", calculator.convert("a"));
+        assertEquals("Bitte nur Zahlen eingeben", calculator.convert("Fünf"));    
+    }
+
 }
 
