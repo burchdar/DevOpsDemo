@@ -51,7 +51,7 @@ public class RomancalculatorTest {
     public void test6() {
         Romancalculator number = new Romancalculator();
         assertEquals("XV", number.convert("15"));
-        assertEquals("XIV", number.convert("19")); 
+        assertEquals("XIX", number.convert("19"));
 }
 
 }
