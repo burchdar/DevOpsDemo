@@ -19,4 +19,20 @@ public class RomancalculatorTest {
         assertThat("IV").isEqualTo(number.convert(4));         
     }
 
+    @Test
+    public void test3() {
+        Romancalculator number = new Romancalculator();
+        assertEquals("I", number.convert(1));
+        assertEquals("II", number.convert(2));
+        assertEquals("III", number.convert(3));
+        assertEquals("IV", number.convert(4));
+        assertEquals("V", number.convert(5));
+        assertEquals("VI", number.convert(6));
+        assertEquals("VII", number.convert(7));
+        assertEquals("VIII", number.convert(8));
+        assertEquals("IX", number.convert(9));
+        assertEquals("X", number.convert(10));       
+    }
+
 }
+
