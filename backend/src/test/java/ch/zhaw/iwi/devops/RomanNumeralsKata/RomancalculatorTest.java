@@ -73,7 +73,7 @@ public class RomancalculatorTest {
     public void test9() {
         Romancalculator number = new Romancalculator();
         assertEquals("C", number.convert("100"));
-        assertEquals("CDXLIX", number.convert("499"));
+        assertEquals("CDXLIX", number.convert("449"));
     }
 
 }
