@@ -9,8 +9,8 @@ public class Romancalculator {
                 return "Bitte nur Zahlen von 1-1000 eingeben";
             }
 
-            String[] romanCharacters = { "X", "IX", "V", "IV", "I"};
-            int[] values = {10, 9, 5, 4, 1};
+            String[] romanCharacters = { "XL","X", "IX", "V", "IV", "I"};
+            int[] values = {40,10, 9, 5, 4, 1};
 
             StringBuilder sb = new StringBuilder();
             for (int j = 0; j < values.length; j++) {
